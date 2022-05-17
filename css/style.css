@@ -17,7 +17,7 @@ body{
 h1{
     font-family: 'Meddon', cursive;
     font-weight: 500;
-    font-size: 70px;
+    font-size: 50px;
     margin: 0;
 }
 
@@ -110,11 +110,14 @@ img{
         body{
             padding: 30px 80px;
             border: 50px solid #3a6b6c11;
-    
         }
     
         .header{
             margin-bottom: 50px;
+        }
+
+        h1{
+            font-size: 70px;
         }
         
         .aboutblog,
