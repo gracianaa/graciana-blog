@@ -1,0 +1,150 @@
+html { box-sizing: border-box; }
+*, ::after, ::before { box-sizing: inherit; }
+
+body{
+      margin: auto;
+      padding: 20px 50px;
+      font-family: 'PT Serif', serif;
+      font-weight: 100;
+      border: 20px solid #3a6b6c11;
+      text-align: center;
+  }
+
+.header{
+    margin-bottom: 30px;
+}
+
+h1{
+    font-family: 'Meddon', cursive;
+    font-weight: 500;
+    font-size: 50px;
+    margin: 0;
+}
+
+.menu__checkbox{
+    position: absolute;
+    left: -9999px;
+}
+
+.menu__list{
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #3a6b6c;
+    
+}
+
+.menu__item{
+    border-bottom: 1px solid #ffffff;
+}
+
+.menu__link{
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.menu__link:hover,
+.menu__link:focus,
+.menu__link:active{
+    background-color: #509899;
+}
+
+.menu__checkbox:checked ~ .menu__list{
+    display: block;
+}
+.menu__checkbox:checked ~ h1{
+    display: none;
+}
+
+img{
+    width: 100%;
+}
+
+
+.aboutblog{
+    margin-bottom: 50px;
+}
+
+/* media pre sekciu header a intro 
+- zobrazenie menu
+- intro foto a text */
+
+@media screen and (min-width: 800px){
+
+    .menu{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .menu__toggler{
+        display: none;
+    }
+
+    .menu__list{
+        display: flex;
+        background-color: #ffffff;
+    }
+
+    .menu__item{
+        border-bottom: 0;
+    }
+
+    .menu__link{
+        color: #000000;
+    }
+    .menu__link:hover,
+    .menu__link:active,
+    .menu__link:focus{
+        background-color: #3a6b6c;
+        color: #ffffff;
+    }
+
+}
+
+    @media screen and (min-width: 990px){
+
+        body{
+            padding: 30px 80px;
+            border: 50px solid #3a6b6c11;
+    
+        }
+    
+        .header{
+            margin-bottom: 50px;
+        }
+        
+        .aboutblog,
+        .aboutme{
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .aboutme{
+            flex-direction: row-reverse;
+        }
+
+        .aboutblog__photo,
+        .aboutme__photo{
+            max-width: 350px;
+        
+        }
+
+        .aboutblog__text,
+        .aboutme__text{
+            max-width: 600px;
+            padding: 15px;
+        }
+
+
+    }
+
+    
+
+
+
+
+
