@@ -4,7 +4,7 @@ html { box-sizing: border-box; }
 body{
       margin: auto;
       padding: 20px 50px;
-      font-family: 'PT Serif', serif;
+      font-family: 'Source Serif Pro', serif;
       font-weight: 100;
       border: 20px solid #3a6b6c11;
       text-align: center;
@@ -14,12 +14,13 @@ body{
     margin-bottom: 30px;
 }
 
-h1{
+/* h1{
     font-family: 'Meddon', cursive;
     font-weight: 500;
     font-size: 50px;
     margin: 0;
-}
+} */
+
 
 .menu__checkbox{
     position: absolute;
@@ -55,7 +56,7 @@ h1{
 .menu__checkbox:checked ~ .menu__list{
     display: block;
 }
-.menu__checkbox:checked ~ h1{
+.menu__checkbox:checked ~ .logo{
     display: none;
 }
 
@@ -63,6 +64,20 @@ img{
     width: 100%;
 }
 
+.aboutblog__photo{
+    box-shadow: -5px 8px 18px #3a6b6c;
+    border-radius: 20px;
+}
+
+.aboutme__photo{
+    box-shadow: 5px 8px 18px #3a6b6c;
+    border-radius: 20px;
+}
+
+.aboutblog__header,
+.aboutme__header{
+    font-style: italic;
+}
 
 .aboutblog{
     margin-bottom: 50px;
@@ -84,8 +99,13 @@ img{
         display: none;
     }
 
+    .logo{
+        flex-basis: 700px;
+    }
+
     .menu__list{
         display: flex;
+        flex-shrink: 0;
         background-color: #ffffff;
     }
 
@@ -116,14 +136,15 @@ img{
             margin-bottom: 50px;
         }
 
-        h1{
+        /* h1{
             font-size: 70px;
-        }
+        } */
         
         .aboutblog,
         .aboutme{
             display: flex;
-            justify-content: space-evenly;
+            justify-content: space-around;
+            align-items: center;
         }
 
         .aboutme{
@@ -132,16 +153,15 @@ img{
 
         .aboutblog__photo,
         .aboutme__photo{
-            max-width: 350px;
+            max-width: 400px;
         
         }
 
         .aboutblog__text,
         .aboutme__text{
-            max-width: 600px;
+            max-width: 700px;
             padding: 15px;
         }
-
 
     }
 
