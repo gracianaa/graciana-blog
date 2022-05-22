@@ -530,22 +530,14 @@ img{
             flex-direction: column;
 
         }
-
-        
-
-
-
-        
     }
-
-   
 
 
     .footer{
         margin: 0;
         padding: 50px 0;
         background-color: #cfb2db3e;  
-        border-top: 1px dotted #ad858d;
+        border-top: 5px dotted #ad858d;
     }
 
 
