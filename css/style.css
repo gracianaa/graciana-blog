@@ -200,7 +200,7 @@ img{
     .contact__header::after{
         content: "";
         display: inline-block;
-        width: 50px;
+        width: 30px;
         height: 3px;
         background-color: #875b90;
         background-position: center;
