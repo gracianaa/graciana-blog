@@ -1,0 +1,24 @@
+{
+  "name": "graciana-blog",
+  "version": "1.0.0",
+  "description": "Záverečný projekt",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx @11ty/eleventy",
+    "serve": "npx @11ty/eleventy --serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gracianaa/graciana-blog.git"
+  },
+  "keywords": [],
+  "author": "Graciana Adamcova",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gracianaa/graciana-blog/issues"
+  },
+  "homepage": "https://github.com/gracianaa/graciana-blog#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.1"
+  }
+}

@@ -1,0 +1,33 @@
+---
+layout: layouts/category.njk
+title: TRAVEL
+section: o mojom cestovaní
+intro: Na tomto mieste sa s Vami podelím o zážitky z mojich ciest.
+---
+
+Už čoskoro...
+
+<div class="articles-flexbox">
+
+    {% for post in collections.travel | reverse %}
+    
+    
+    
+        <div class="articles__item">
+            
+            <div class="articles__content">
+                
+            <img class="articles__photo" src="/images/{{post.data.foto}}" alt="{{post.data.alt}}">
+        
+    
+                <h2>{{ post.data.title }}</h2>
+                <p>{{ post.data.perex }}</p>
+                <p>
+                    <a href="{{ post.url }}">Celý článok</a>
+                </p>
+            </div>
+        </div>
+        {% endfor %}
+    
+        
+    </div>

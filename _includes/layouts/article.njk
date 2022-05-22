@@ -1,0 +1,53 @@
+---
+layout: layouts/main-template.njk
+---
+<a class="article__link" href="/books/">
+    <h1 class="category__header">{{category}}</h1>
+</a>
+
+<main class="article-site">
+    
+    
+    <article class="article">
+        
+        <img class="article__image" src="/images/{{foto}}" alt="{{alt}}">
+
+        <h1 class="article__title">{{title}}</h1>
+
+        <p class="article__meta">Publikované {{ page.date.toLocaleString('cs-CZ') }}</p>
+
+        <div class="article__content">
+            <div class="article__text">
+	
+				<p class="article__perex">{{perex}}</p>
+	
+				{{ content | safe }}
+	
+			</div>
+
+        </div>
+
+
+    </article>
+
+    <div class="articles-collection">
+
+    {% for post in collections.article | randomLimit (2, page.url)  %}
+
+    <div class="articles__item--aside">
+        
+        <div class="articles__content">
+            
+        <img class="articles__photo" src="/images/{{post.data.foto}}" alt="{{post.data.alt}}">
+    
+
+            <h2>{{ post.data.title }}</h2>
+            <p>
+                <a href="{{ post.url }}">Celý článok</a>
+            </p>
+        </div>
+    </div>
+    {% endfor %}
+
+    </div>
+</main>

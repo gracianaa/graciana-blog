@@ -1,0 +1,31 @@
+---
+layout: layouts/main-template.njk
+---
+
+<div class="category-site">  
+    
+    <div class="category-site__content">
+        
+        <aside class="aside-welcome">
+            <img class="category-site__photo" src="/images/ja-grace.jpg" alt="graciana">
+            
+            <h2>Vítajte v sekcii {{section}}</h2>
+            
+            <p>{{intro}}</p>
+            
+        </aside>
+
+        <div class="category__grid">
+        
+        <h1 class="news__header">{{title}}</h1>
+        
+        {{content | safe}}
+   
+    </div>
+    
+   </div>
+
+</div>
+
+
+

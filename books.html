@@ -1,0 +1,30 @@
+---
+layout: layouts/category.njk
+title: BOOKS
+section: o knihách
+intro: Tu môžete nájsť všetky články o knihách, ktoré som prečítala a rada by som sa podelila o ich múdro.
+---
+<div class="articles-flexbox">
+
+{% for post in collections.books | reverse %}
+
+
+
+    <div class="articles__item">
+        
+        <div class="articles__content">
+            
+        <img class="articles__photo" src="/images/{{post.data.foto}}" alt="{{post.data.alt}}">
+    
+
+            <h2>{{ post.data.title }}</h2>
+            <p>{{ post.data.perex }}</p>
+            <p>
+                <a href="{{ post.url }}">Celý článok</a>
+            </p>
+        </div>
+    </div>
+    {% endfor %}
+
+    
+</div>

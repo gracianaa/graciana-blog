@@ -1,71 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Graciána-BLOG</title>
-
-    <link href="https://fonts.googleapis.com/css2?family=Meddon&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro&display=swap" rel="stylesheet">
-    
-
-    <link rel="stylesheet" href="/css/style.css">
-</head>
-<body>
-    
-    <header class="header">
-
-        <nav class="menu">
-
-        <input type="checkbox" class="menu__checkbox" id="menu-checkbox">
-		<label for="menu-checkbox" class="menu__toggler">☰</label>
-        
-        
-            <ul class="menu__list">
-                <li class="menu__item"><a href="/" class="menu__link">Úvod</a></li>
-                <li class="menu__item"><a href="//" class="menu__link">O mne</a></li>
-            </ul>
-
-                <!-- <h1>Graciána</h1> -->
-
-            <img class="logo" src="/images/graciana-font3.svg" alt="graciana">
-
-            <ul class="menu__list">
-                <li class="menu__item"><a href="//" class="menu__link">Books</a></li>
-                <li class="menu__item"><a href="//" class="menu__link">Journal</a></li>
-                <li class="menu__item"><a href="//" class="menu__link">Travel</a></li>
-            </ul>
-
-        </nav>
-        
-
-    </header>
+---
+layout: layouts/main-template.njk
+title: Graciána-BLOG
+---
 
     <section class="intro">
 
-        <div class="aboutblog">
+        <div class="about-blog">
             
-            <img class="aboutblog__photo" src="images/uvod-unsplash_cut.jpg" alt="chill">
+            <img class="about-blog__photo" src="/images/uvod-unsplash_cut.jpg" alt="chill">
 
-            <div class="aboutblog__text">
+            <div class="about-blog__text">
 
-                <h2 class="aboutblog__header">o BLOGU</h2>
+                <h2 class="about-blog__header">o BLOGU</h2>
 
-                <p class="aboutblog__paragraph">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis placeat doloribus porro sequi quasi, quis corrupti nesciunt aliquam tenetur natus voluptatum iure modi, cumque, sunt et obcaecati voluptas quaerat id.</p>
+                <p class="about-blog__paragraph">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis placeat doloribus porro sequi quasi, quis corrupti nesciunt aliquam tenetur natus voluptatum iure modi, cumque, sunt et obcaecati voluptas quaerat id.</p>
                 
             </div>
 
         </div>
 
-        <div class="aboutme">
-            <img  class="aboutme__photo" src="images/ja-spring.jpg" alt="lampiony">
+        <div class="about-me">
+            <img  class="about-me__photo" src="/images/ja-spring.jpg" alt="lampiony">
 
-            <div class="aboutme__text">
+            <div class="about-me__text">
 
-                <h2 class="aboutme__header" >o MNE</h2>
+                <h2 class="about-me__header" >o MNE</h2>
 
-                <p class="aboutme__paragraph">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis placeat doloribus porro sequi quasi, quis corrupti nesciunt aliquam tenetur natus voluptatum iure modi, cumque, sunt et obcaecati voluptas quaerat id.</p>
+                <p class="about-me__paragraph">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis placeat doloribus porro sequi quasi, quis corrupti nesciunt aliquam tenetur natus voluptatum iure modi, cumque, sunt et obcaecati voluptas quaerat id.</p>
             </div>  
 
         </div>
@@ -74,17 +35,68 @@
 
     <section class="category">
 
+        <h1 class="category__header">Kategórie</h1>
+
+        <div class="category__link">
+
+            <div class="category__link--books">
+                <h2 class="category__title">Books</h2>
+                <a href="/books/">
+                    <img class="category__photo" src="/images/foto-book.png" alt="Books">
+                </a>
+            </div>
+
+            <div class="category__link--journal">
+                <h2 class="category__title">Journal</h2>
+                <a href="/journal/">
+                    <img class="category__photo" src="/images/foto-journal.png" alt="Journal">
+                </a>
+            </div>  
+
+            <div class="category__link--travel">
+                <h2 class="category__title">Travel</h2>
+                <a href="/travel/">
+                    <img class="category__photo" src="/images/foto-travel.png" alt="Travel">
+                </a>
+            </div>
+        </div>
+
     </section>
+
     <section class="news">
 
+        <h1 class="news__header">Novinky z blogu</h1>
+
+        <div class="articles-flexbox">
+
+            {% for post in collections.all | reverse | limit (3) %}
+            
+                <div class="articles__item--news">
+                    
+                    <div class="articles__content">
+                        
+                    <img class="articles__photo" src="/images/{{post.data.foto}}" alt="{{post.data.alt}}">
+                
+            
+                        <h2>{{ post.data.title }}</h2>
+                        <p>{{ post.data.perex }}</p>
+                        <p>
+                            <a href="{{ post.url }}">Celý článok</a>
+                        </p>
+                    </div>
+                </div>
+            {% endfor %}
+            
+                
+        </div>
+
+
     </section>
 
 
-    <footer>
-
-    </footer>
 
 
 
-</body>
-</html>
+
+
+

@@ -1,0 +1,29 @@
+---
+layout: layouts/category.njk
+title: JOURNAL
+section: mojich myšlienok
+intro: Na tomto mieste nájdete zápisky mojich myšlienok, takýto môj verejný denník.
+---
+
+<div class="articles-flexbox">
+
+    {% for post in collections.journal | reverse %}
+    
+    
+    
+        <div class="articles__item">
+            
+            <div class="articles__content">
+                
+            <img class="articles__photo" src="/images/{{post.data.foto}}" alt="{{post.data.alt}}">
+        
+    
+                <h2>{{ post.data.title }}</h2>
+                <p>{{ post.data.perex }}</p>
+                <p><a href="{{ post.url }}">Celý článok</a></p>
+            </div>
+        </div>
+        {% endfor %}
+    
+        
+    </div>

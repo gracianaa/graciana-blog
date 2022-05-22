@@ -1,2 +1,0 @@
-# graciana-blog
-Záverečný projekt
