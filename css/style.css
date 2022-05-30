@@ -43,7 +43,7 @@ body{
     text-decoration: none;
     color: #ffffff;
     font-family: 'Architects Daughter', cursive;
-    font-size: 36px;
+    font-size: 20px;
 }
 
 .menu__link:hover,
@@ -60,7 +60,7 @@ body{
 }
 
 .menu__toggler{
-    font-size: 48px;
+    font-size: 24px;
 }
 
 img{
