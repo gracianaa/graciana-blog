@@ -19,13 +19,6 @@ body{
     padding: 0 50px;
 }
 
-/* h1{
-    font-family: 'Meddon', cursive;
-    font-weight: 500;
-    font-size: 50px;
-    margin: 0;
-} */
-
 
 .menu__checkbox{
     position: absolute;
@@ -50,6 +43,7 @@ body{
     text-decoration: none;
     color: #ffffff;
     font-family: 'Architects Daughter', cursive;
+    font-size: 36px;
 }
 
 .menu__link:hover,
@@ -63,6 +57,10 @@ body{
 }
 .menu__checkbox:checked ~ .menu__logo{
     display: none;
+}
+
+.menu__toggler{
+    font-size: 48px;
 }
 
 img{
