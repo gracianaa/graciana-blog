@@ -541,6 +541,70 @@ img{
     }
 
 
+    /* ----------sekcia o mne--------------- */
+
+
+    .about-me__site{
+        margin: 40px 50px;
+    }
+
+    .about-me__photo--first,
+    .about-me__photo--second,
+    .about-me__photo--third{
+        max-width: 250px;
+        border-radius: 175px;
+       
+    }
+
+    .about-me-more,
+    .about-me-more__box--reverse{
+        margin-bottom: 40px;
+    }
+
+
+
+   
+
+    @media screen and (min-width: 640px) {
+
+
+        .about-me-more{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .about-me-more__box--reverse{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: row-reverse;
+        }
+
+        .about-me__photo--first,
+        .about-me__photo--second,
+        .about-me__photo--third{
+        max-width: 300px;
+        border-radius: 175px;
+       
+    }
+
+    .about-me__text{
+        padding: 20px;
+    }
+        
+    }
+
+    @media screen and (min-width: 800px){
+        .about-me__site{
+            margin: 50px 100px;
+        }
+    }
+
+
+
+    /* ----------KONEC sekcia o mne--------------- */
+
     .footer{
         display: flex;
         justify-content: space-evenly;
